@@ -1,0 +1,1 @@
+INSERT INTO USERS_T(profile, password) VALUES (1, '123')

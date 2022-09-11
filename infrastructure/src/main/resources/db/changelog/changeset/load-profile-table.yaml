@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-profiles
+      author: Ashot
+      changes:
+        - sqlFile:
+            path: db/changelog/changeset/sql/profiles.sql

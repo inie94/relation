@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user
+      author: Ashot
+      changes:
+        - createTable:
+            tableName: USERS_T
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: profile
+                  type: bigint
+                  constraints:
+                    foreignKeyName: profile-user-fk
+                    referencedTableName: PROFILES_T
+                    referencedColumnNames: id
+              - column:
+                  name: password
+                  type: varchar(16)
+                  constraints:
+                    nullable: false

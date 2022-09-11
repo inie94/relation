@@ -1,0 +1,1 @@
+INSERT INTO PROFILES_T(email, firstname, lastname, birth, status) VALUES ('test@mail.com', 'Jhon', 'Doe', '2020-12-15', 'ONLINE')

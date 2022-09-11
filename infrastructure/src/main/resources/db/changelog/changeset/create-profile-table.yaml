@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-profile
+      author: Ashot
+      changes:
+        - createTable:
+            tableName: PROFILES_T
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lastname
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: birth
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
